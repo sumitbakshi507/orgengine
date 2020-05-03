@@ -2,9 +2,13 @@
 using Microsoft.Extensions.DependencyInjection;
 using OrgLive.Domain.Core.Bus;
 using OrgLive.Infra.Bus;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using OrgLive.QuotingEngine.Application.Interfaces;
+using OrgLive.QuotingEngine.Application.Services;
+using OrgLive.QuotingEngine.Data.Context;
+using OrgLive.QuotingEngine.Data.Repository;
+using OrgLive.QuotingEngine.Domain.EventHandlers;
+using OrgLive.QuotingEngine.Domain.Events;
+using OrgLive.QuotingEngine.Domain.Interfaces;
 
 namespace OrgLive.Infra.IoC
 {
@@ -22,12 +26,16 @@ namespace OrgLive.Infra.IoC
             //Subscriptions
 
             //Domain Events
+            services.AddTransient<IEventHandler<QuoteRequestCreatedEvent>, QuoteRequestEventHandler>();
 
             //Domain Commands
 
             //Application Services
+            services.AddTransient<IQuoteService, QuoteService>();
 
             //Data
+            services.AddTransient<IQuoteRepository, QuoteRepository>();
+            services.AddTransient<QuoteDbContext>();
         }
     }
 }

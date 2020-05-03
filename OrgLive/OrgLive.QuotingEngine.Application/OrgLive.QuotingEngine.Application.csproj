@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OrgLive.Domain.Core\OrgLive.Domain.Core.csproj" />
+    <ProjectReference Include="..\OrgLive.QuotingEngine.Domain\OrgLive.QuotingEngine.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

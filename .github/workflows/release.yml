@@ -20,7 +20,7 @@ jobs:
     - name: Path
       run: dir *.*
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore ~/OrgLive/OrgLive.sln --verbosity detailed
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Test

@@ -13,6 +13,9 @@
   <ItemGroup>
     <ProjectReference Include="..\OrgLive.Domain.Core\OrgLive.Domain.Core.csproj" />
     <ProjectReference Include="..\OrgLive.Infra.Bus\OrgLive.Infra.Bus.csproj" />
+    <ProjectReference Include="..\OrgLive.QuotingEngine.Application\OrgLive.QuotingEngine.Application.csproj" />
+    <ProjectReference Include="..\OrgLive.QuotingEngine.Data\OrgLive.QuotingEngine.Data.csproj" />
+    <ProjectReference Include="..\OrgLive.QuotingEngine.Domain\OrgLive.QuotingEngine.Domain.csproj" />
   </ItemGroup>
 
 </Project>

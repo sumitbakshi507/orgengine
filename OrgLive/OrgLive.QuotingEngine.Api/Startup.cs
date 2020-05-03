@@ -20,6 +20,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using OrgLive.QuotingEngine.Domain.Events;
 using OrgLive.QuotingEngine.Domain.EventHandlers;
+using System.Reflection;
 
 namespace OrgLive.QuotingEngine.Api
 {
@@ -40,6 +41,8 @@ namespace OrgLive.QuotingEngine.Api
                 options.UseSqlServer(Configuration.GetConnectionString("QuoteDbConnection"));
             });
 
+            RefreshDBSchema();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Quote Microservice", Version = "v1" });
@@ -54,6 +57,19 @@ namespace OrgLive.QuotingEngine.Api
         private void RegisterServices(IServiceCollection services)
         {
             DependencyContainer.RegisterServices(services);
+        }
+
+        private void RefreshDBSchema() 
+        {
+            var assemblyName = "OrgLive.QuotingEngine.Domain";
+            var nameSpace = "OrgLive.QuotingEngine.Domain.Models";
+
+            var asm = Assembly.Load(assemblyName);
+            var dbObjects = asm.GetTypes().Where(p =>
+                 p.Namespace == nameSpace
+            ).ToList();
+
+            Console.WriteLine(dbObjects);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

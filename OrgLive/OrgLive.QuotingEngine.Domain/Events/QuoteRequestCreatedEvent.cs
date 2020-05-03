@@ -11,10 +11,16 @@ namespace OrgLive.QuotingEngine.Domain.Events
 
         public string Version { get; set; }
 
-        public QuoteRequestCreatedEvent(string productName, string version)
+        public DateTime StartDate { get; set; }
+
+        public DateTime EndDate { get; set; }
+
+        public QuoteRequestCreatedEvent(string productName, string version, DateTime startDate)
         {
             ProductName = productName;
             Version = version;
+            StartDate = startDate;
+            EndDate = startDate.AddYears(1);
         }
     }
 }

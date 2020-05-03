@@ -49,7 +49,10 @@ namespace OrgLive.QuotingEngine.Domain.EventHandlers
             {
                 ProductName = @event.ProductName,
                 Version = @event.Version,
-                QuoteNumber = quoteNumber
+                QuoteNumber = quoteNumber,
+                QuoteDate = DateTime.Now,
+                StartDate = @event.StartDate,
+                EndDate = @event.EndDate
             });
 
             return Task.CompletedTask;

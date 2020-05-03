@@ -6,8 +6,6 @@ using MediatR;
 using OrgLive.Domain.Core.Bus;
 using OrgLive.Infra.IoC;
 using OrgLive.QuotingEngine.Data.Context;
-//using OrgLive.QuotingEngine.Domain.EventHandlers;
-//using OrgLive.QuotingEngine.Domain.Events;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;

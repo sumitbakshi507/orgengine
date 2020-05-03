@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{4ADA8241-6DD1-4040-BB84-54F6419859EC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.EventBus", "Infra.EventBus", "{E6B5A7BB-BCE9-4F15-9DAF-ADBB250A7202}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.Bus", "Infra.Bus", "{E6B5A7BB-BCE9-4F15-9DAF-ADBB250A7202}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.IoC", "Infra.IoC", "{BA455CBD-5FA9-4C75-B592-FFE119D3E25A}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrgLive.Infra.IoC", "OrgLive.Infra.IoC\OrgLive.Infra.IoC.csproj", "{FB903F3A-3F54-458C-9E70-C20391FC48CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrgLive.Domain.Core", "OrgLive.Domain.Core\OrgLive.Domain.Core.csproj", "{9D088DD1-1F39-417A-956D-3D9B92426C1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrgLive.Infra.Bus", "OrgLive.Infra.Bus\OrgLive.Infra.Bus.csproj", "{9DCDD127-2481-4A4E-BD57-1B9AA48643DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{9D088DD1-1F39-417A-956D-3D9B92426C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D088DD1-1F39-417A-956D-3D9B92426C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D088DD1-1F39-417A-956D-3D9B92426C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DCDD127-2481-4A4E-BD57-1B9AA48643DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DCDD127-2481-4A4E-BD57-1B9AA48643DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DCDD127-2481-4A4E-BD57-1B9AA48643DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DCDD127-2481-4A4E-BD57-1B9AA48643DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +44,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FB903F3A-3F54-458C-9E70-C20391FC48CE} = {BA455CBD-5FA9-4C75-B592-FFE119D3E25A}
 		{9D088DD1-1F39-417A-956D-3D9B92426C1D} = {4ADA8241-6DD1-4040-BB84-54F6419859EC}
+		{9DCDD127-2481-4A4E-BD57-1B9AA48643DB} = {E6B5A7BB-BCE9-4F15-9DAF-ADBB250A7202}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F40CB2AE-0FA6-4F31-B54B-2AC54B4BE9CD}
